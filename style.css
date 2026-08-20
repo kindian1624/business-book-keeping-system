@@ -1,0 +1,210 @@
+/* GENERAL PAGE STYLING */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f1f4;
+    color: #1a1a2e;
+}
+
+
+/* HEADER */
+
+header {
+    background-color: #001f3f;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+header h1 {
+    margin: 0 0 10px;
+    font-size: 32px;
+}
+
+header p {
+    margin: 0;
+}
+
+
+/* WELCOME / USER PAGE */
+
+.welcome {
+    max-width: 500px;
+    margin: 80px auto;
+    padding: 40px;
+    background-color: white;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+}
+
+.welcome h2 {
+    color: #800020;
+    font-size: 28px;
+}
+
+.welcome p {
+    margin-bottom: 25px;
+}
+
+
+/* INPUT */
+
+input,
+select {
+    width: 100%;
+    padding: 13px;
+    margin-bottom: 15px;
+    border: 2px solid #001f3f;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+
+/* BUTTONS */
+
+button {
+    background-color: #800020;
+    color: white;
+    border: none;
+    padding: 13px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #5a0016;
+}
+
+
+/* NAVIGATION */
+
+nav {
+    margin-top: 20px;
+}
+
+nav button {
+    background-color: #800020;
+    margin: 5px;
+}
+
+nav button:hover {
+    background-color: #5a0016;
+}
+
+
+/* MAIN CONTENT */
+
+main {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+
+/* DASHBOARD */
+
+.dashboard h2 {
+    color: #800020;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: white;
+    flex: 1;
+    min-width: 220px;
+    padding: 25px;
+    text-align: center;
+    border-radius: 12px;
+    border-top: 6px solid #001f3f;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    color: #001f3f;
+}
+
+.card p {
+    color: #800020;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+
+/* TRANSACTIONS */
+
+.transactions,
+.history {
+    background-color: white;
+    padding: 30px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.transactions h2,
+.history h2 {
+    color: #800020;
+}
+
+form {
+    max-width: 500px;
+}
+
+
+/* TRANSACTION HISTORY */
+
+#transaction-list p {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+
+/* FOOTER */
+
+footer {
+    background-color: #001f3f;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    header h1 {
+        font-size: 25px;
+    }
+
+    .welcome {
+        margin: 40px 20px;
+        padding: 30px 20px;
+    }
+
+    main {
+        width: 92%;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+
+}

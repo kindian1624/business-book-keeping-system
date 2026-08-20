@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UFT-8">
+        <meta name="viewpiont" content="width=device-width, initial-scale=1.0">
+
+        <tittle>Business Book-Keeping System</tittle>
+
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+                           <!--USERPAGE/LOGINS-->
+        
+        <section id="user-page">
+ 
+        <header>
+
+            <h1>Business Book-Keeping System</h1>
+            <p>Finaces made easy.For you.</p>
+
+        </header>
+        <div class="welcome">
+
+            <h2>Welcome</h2>
+            <p>Enter your business name to continue.</p>
+            <input 
+                type="text"
+                id="business-name"
+                placeholder="Enter Business Name"
+            >
+
+            <button onclick="loginBusiness()">Enter Dashboard</button>
+
+        </div>
+
+        </section>
+                   <!--DASHBOARD PAGE-->
+
+     <section id="dashboard-page" sytle="display: none;">
+
+        <header>
+
+            <h1 id="dashboard-business-name">
+                Business Dashboard
+            </h1>
+
+            <nav>
+                <button onclick="showDashboard()">Dashboard</button>
+                <button onclick="showBookkeeping()">Bookkeeping</button>
+                <button onclick="showUserPage()">Logout</button>
+            </nav>
+
+        </header>
+
+
+        <main>
+
+            <section class="dashboard">
+
+                <h2>Finacial Overview</h2>
+
+                <div class="cards">
+
+                    <div class="card">
+                        <h3>Total Income</h3>
+                        <p id="total-income">R0.00</p>
+                    </div>
+
+                    <div class="card">
+                        <h3>Total Expenses</h3>
+                        <p id="total-expenses">R0.00</p>
+                    </div>
+
+                    <div class="card">
+                        <h3>Net Profit</h3>
+                        <p id="net-profit">R0.00</p>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </section>
+
+              <!--BOOKKEEPING PAGE-->
+    
+              <section id="bookkeeping-page" style="display: none;">
+
+                <header>
+
+                    <h1 id="bookkeeping-business-name">
+                        Bookkeeping
+                    </h1>
+
+                    <nav>
+                        
+                        <button onclick="showDashboard()">Dashboard</button>
+                        <button onclick="showBookkeeping()">Bookkeeping</button>
+                        <button onclick="showUserPage()">Logout</button>
+
+                    </nav>
+
+                </header>
+
+                        <main>
+
+                            <section class="transactions">
+
+                                <h2>Record Transactions</h2>
+
+                                <form id="transactions-form"  onsubmit="return false;">
+
+                                    <select id="transaction-type">
+                                        <option value="income">Income</option>
+                                        <option value="expense">Exepense</option>
+                                    </select>
+
+                                    <input
+                                        type="number"
+                                        id="amount"
+                                        placeholder="Enter amount"
+                                        step="0.01"
+                                        min="0"
+                                        required
+                                        >
+                                    <button type="submit">Add Transaction</button>
+
+                                </form>
+
+                            </section>
+
+                            <section class="history">
+                                <h2>Transaction History</h2>
+                                <div id="transaction-list">
+                                    <p>No transactions recorded yet.</p>
+                                </div>
+                            </section>
+
+                        </main>
+
+              </section>
+
+              <footer>
+                <p>Business Book-Keeping System</p>
+              </footer>
+
+              <script src="script.js"></script>
+    </body>
+</html>
